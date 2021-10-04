@@ -1,10 +1,19 @@
 import React from "react";
-import Recipe from "./Recipe";
+import RecipeCard from "./RecipeCard";
 
-export default function RecipeContainer() {
+
+export default function RecipeContainer({recipeList}) {
+
+  //displays ratings on 
+  function whatRating(ratings){}
+  
+
   return (
     <div>
-      <Recipe />
+      {recipeList.map(recipe => <RecipeCard recipe = {recipe} key = {recipe.name}/>
+    )}
     </div>
   );
 }
+
+
